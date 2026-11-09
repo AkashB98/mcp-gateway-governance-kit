@@ -1,0 +1,209 @@
+{
+  "catalog_shape": {
+    "catalog_problems": [],
+    "grants_examined": 26,
+    "policy_problems": [],
+    "roles": 8,
+    "servers": 5,
+    "tools": 18,
+    "universe_scopes": 18
+  },
+  "coverage_gaps": {
+    "gaps": {
+      "analyst": [],
+      "billing_clerk": [],
+      "data_engineer": [],
+      "eng_lead": [],
+      "eng_staff": [],
+      "finance_lead": [],
+      "sales_rep": [],
+      "support_rep": []
+    },
+    "roles_with_gaps": 0
+  },
+  "diff_ana_joiner": {
+    "creep_scopes": [],
+    "creep_tools": [],
+    "gained_scopes": [
+      "crm:contacts:read",
+      "docs:read",
+      "warehouse:read"
+    ],
+    "gained_tools": [
+      "crm.search_contacts",
+      "docs.read_doc",
+      "warehouse.query_data"
+    ],
+    "kind": "joiner",
+    "lost_scopes": [],
+    "lost_tools": []
+  },
+  "diff_jules_mover": {
+    "creep_scopes": [
+      "docs:write"
+    ],
+    "creep_tools": [
+      "docs.create_doc"
+    ],
+    "gained_scopes": [
+      "code:pr:approve",
+      "code:secrets:write"
+    ],
+    "gained_tools": [
+      "code-host.approve_pr",
+      "code-host.manage_secrets"
+    ],
+    "kind": "mover",
+    "lost_scopes": [
+      "docs:write"
+    ],
+    "lost_tools": [
+      "docs.create_doc"
+    ]
+  },
+  "diff_marcus_mover": {
+    "creep_scopes": [
+      "billing:invoices:read",
+      "billing:invoices:write",
+      "billing:payments:read",
+      "billing:payments:write"
+    ],
+    "creep_tools": [
+      "billing.create_invoice",
+      "billing.refund_payment",
+      "billing.view_invoice",
+      "billing.view_payment"
+    ],
+    "gained_scopes": [
+      "crm:contacts:read",
+      "warehouse:read"
+    ],
+    "gained_tools": [
+      "crm.search_contacts",
+      "warehouse.query_data"
+    ],
+    "kind": "mover",
+    "lost_scopes": [
+      "billing:invoices:read",
+      "billing:invoices:write",
+      "billing:payments:read"
+    ],
+    "lost_tools": [
+      "billing.create_invoice",
+      "billing.view_invoice",
+      "billing.view_payment"
+    ]
+  },
+  "diff_priya_mover": {
+    "creep_scopes": [
+      "crm:contacts:write",
+      "crm:export",
+      "docs:write"
+    ],
+    "creep_tools": [
+      "crm.create_contact",
+      "crm.export_contacts",
+      "docs.create_doc"
+    ],
+    "gained_scopes": [
+      "billing:invoices:read",
+      "billing:payments:read"
+    ],
+    "gained_tools": [
+      "billing.view_invoice",
+      "billing.view_payment"
+    ],
+    "kind": "mover",
+    "lost_scopes": [
+      "crm:contacts:write",
+      "docs:write"
+    ],
+    "lost_tools": [
+      "crm.create_contact",
+      "docs.create_doc"
+    ]
+  },
+  "diff_tom_leaver": {
+    "creep_scopes": [
+      "billing:invoices:approve",
+      "billing:invoices:read",
+      "billing:invoices:write",
+      "billing:payments:read",
+      "billing:payments:write",
+      "docs:read",
+      "warehouse:read"
+    ],
+    "creep_tools": [
+      "billing.approve_invoice",
+      "billing.create_invoice",
+      "billing.refund_payment",
+      "billing.view_invoice",
+      "billing.view_payment",
+      "docs.read_doc",
+      "warehouse.query_data"
+    ],
+    "gained_scopes": [],
+    "gained_tools": [],
+    "kind": "leaver",
+    "lost_scopes": [
+      "billing:invoices:approve",
+      "billing:invoices:read",
+      "billing:invoices:write",
+      "billing:payments:read",
+      "docs:read"
+    ],
+    "lost_tools": [
+      "billing.approve_invoice",
+      "billing.create_invoice",
+      "billing.view_invoice",
+      "billing.view_payment",
+      "docs.read_doc"
+    ]
+  },
+  "evidence_pack": {
+    "audit_records": 8,
+    "pack_md5": "7621a806510811445ed6038b94992dad",
+    "total_findings": 8,
+    "verify_ok": true
+  },
+  "grant_findings": {
+    "by_type": {
+      "IMPLIED_EXCESS": 1,
+      "UNUSED_GRANT": 2,
+      "WILDCARD_GRANT": 3
+    },
+    "ids": [
+      "IMPLIED_EXCESS:billing_clerk:billing:payments:write",
+      "UNUSED_GRANT:eng_staff:code:secrets:write",
+      "UNUSED_GRANT:finance_lead:warehouse:read",
+      "WILDCARD_GRANT:data_engineer:warehouse:*",
+      "WILDCARD_GRANT:finance_lead:billing:*",
+      "WILDCARD_GRANT:sales_rep:crm:*"
+    ],
+    "sales_wildcard_excess": [
+      "crm:export"
+    ]
+  },
+  "implication_graph": {
+    "implies": [
+      true,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  "sod_findings": {
+    "ids": [
+      "SOD:eng_lead:pull_requests:code-host.create_pr+code-host.approve_pr",
+      "SOD:finance_lead:invoices:billing.create_invoice+billing.approve_invoice"
+    ]
+  }
+}
