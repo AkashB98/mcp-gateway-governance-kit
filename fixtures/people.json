@@ -1,0 +1,34 @@
+{
+  "people": [
+    {
+      "from_role": null,
+      "kind": "joiner",
+      "name": "ana",
+      "to_role": "analyst"
+    },
+    {
+      "from_role": "eng_staff",
+      "kind": "mover",
+      "name": "jules",
+      "to_role": "eng_lead"
+    },
+    {
+      "from_role": "billing_clerk",
+      "kind": "mover",
+      "name": "marcus",
+      "to_role": "analyst"
+    },
+    {
+      "from_role": "sales_rep",
+      "kind": "mover",
+      "name": "priya",
+      "to_role": "support_rep"
+    },
+    {
+      "from_role": "finance_lead",
+      "kind": "leaver",
+      "name": "tom",
+      "to_role": null
+    }
+  ]
+}
