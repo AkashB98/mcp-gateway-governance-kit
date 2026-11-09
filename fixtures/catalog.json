@@ -1,0 +1,181 @@
+{
+  "name": "helios-home mcp catalog (fictional)",
+  "servers": [
+    {
+      "id": "crm",
+      "name": "Helios CRM",
+      "tools": [
+        {
+          "action": "read",
+          "name": "search_contacts",
+          "resource": "contacts",
+          "scopes": [
+            "crm:contacts:read"
+          ]
+        },
+        {
+          "action": "create",
+          "name": "create_contact",
+          "resource": "contacts",
+          "scopes": [
+            "crm:contacts:write"
+          ]
+        },
+        {
+          "action": "export",
+          "name": "export_contacts",
+          "resource": "contacts",
+          "scopes": [
+            "crm:contacts:read",
+            "crm:export"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "billing",
+      "name": "Helios Billing",
+      "tools": [
+        {
+          "action": "read",
+          "name": "view_invoice",
+          "resource": "invoices",
+          "scopes": [
+            "billing:invoices:read"
+          ]
+        },
+        {
+          "action": "create",
+          "name": "create_invoice",
+          "resource": "invoices",
+          "scopes": [
+            "billing:invoices:write"
+          ]
+        },
+        {
+          "action": "approve",
+          "name": "approve_invoice",
+          "resource": "invoices",
+          "scopes": [
+            "billing:invoices:approve"
+          ]
+        },
+        {
+          "action": "read",
+          "name": "view_payment",
+          "resource": "payments",
+          "scopes": [
+            "billing:payments:read"
+          ]
+        },
+        {
+          "action": "write",
+          "name": "refund_payment",
+          "resource": "payments",
+          "scopes": [
+            "billing:payments:write"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "code-host",
+      "name": "Helios Code Host",
+      "tools": [
+        {
+          "action": "read",
+          "name": "view_repo",
+          "resource": "repos",
+          "scopes": [
+            "code:repos:read"
+          ]
+        },
+        {
+          "action": "create",
+          "name": "create_pr",
+          "resource": "pull_requests",
+          "scopes": [
+            "code:repos:write"
+          ]
+        },
+        {
+          "action": "approve",
+          "name": "approve_pr",
+          "resource": "pull_requests",
+          "scopes": [
+            "code:pr:approve"
+          ]
+        },
+        {
+          "action": "write",
+          "name": "manage_secrets",
+          "resource": "secrets",
+          "scopes": [
+            "code:secrets:write"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "docs",
+      "name": "Helios Docs",
+      "tools": [
+        {
+          "action": "read",
+          "name": "read_doc",
+          "resource": "documents",
+          "scopes": [
+            "docs:read"
+          ]
+        },
+        {
+          "action": "create",
+          "name": "create_doc",
+          "resource": "documents",
+          "scopes": [
+            "docs:write"
+          ]
+        },
+        {
+          "action": "approve",
+          "name": "approve_doc",
+          "resource": "documents",
+          "scopes": [
+            "docs:approve"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "warehouse",
+      "name": "Helios Warehouse",
+      "tools": [
+        {
+          "action": "read",
+          "name": "query_data",
+          "resource": "datasets",
+          "scopes": [
+            "warehouse:read"
+          ]
+        },
+        {
+          "action": "export",
+          "name": "export_data",
+          "resource": "datasets",
+          "scopes": [
+            "warehouse:read",
+            "warehouse:export"
+          ]
+        },
+        {
+          "action": "write",
+          "name": "manage_tables",
+          "resource": "datasets",
+          "scopes": [
+            "warehouse:write"
+          ]
+        }
+      ]
+    }
+  ]
+}
