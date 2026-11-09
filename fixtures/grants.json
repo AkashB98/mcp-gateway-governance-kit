@@ -1,0 +1,47 @@
+{
+  "grants": {
+    "analyst": [
+      "warehouse:read",
+      "docs:read",
+      "crm:contacts:read"
+    ],
+    "billing_clerk": [
+      "billing:invoices:write",
+      "billing:payments:read",
+      "docs:read",
+      "billing:payments:write"
+    ],
+    "data_engineer": [
+      "warehouse:*",
+      "code:repos:read"
+    ],
+    "eng_lead": [
+      "code:repos:write",
+      "code:pr:approve",
+      "code:secrets:write",
+      "docs:read"
+    ],
+    "eng_staff": [
+      "code:repos:write",
+      "docs:write",
+      "code:secrets:write"
+    ],
+    "finance_lead": [
+      "billing:*",
+      "docs:read",
+      "warehouse:read"
+    ],
+    "sales_rep": [
+      "crm:contacts:write",
+      "docs:write",
+      "crm:*"
+    ],
+    "support_rep": [
+      "crm:contacts:read",
+      "docs:read",
+      "billing:invoices:read",
+      "billing:payments:read"
+    ]
+  },
+  "note": "actual IdP grants per role; may drift from policy (that drift is the point)"
+}
