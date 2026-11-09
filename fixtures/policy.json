@@ -1,0 +1,90 @@
+{
+  "name": "helios-home role policy (single table: role -> servers -> tools; scopes derive from tools)",
+  "roles": {
+    "analyst": {
+      "crm": [
+        "search_contacts"
+      ],
+      "docs": [
+        "read_doc"
+      ],
+      "warehouse": [
+        "query_data"
+      ]
+    },
+    "billing_clerk": {
+      "billing": [
+        "view_invoice",
+        "create_invoice",
+        "view_payment"
+      ],
+      "docs": [
+        "read_doc"
+      ]
+    },
+    "data_engineer": {
+      "code-host": [
+        "view_repo"
+      ],
+      "warehouse": [
+        "query_data",
+        "manage_tables",
+        "export_data"
+      ]
+    },
+    "eng_lead": {
+      "code-host": [
+        "view_repo",
+        "create_pr",
+        "approve_pr",
+        "manage_secrets"
+      ],
+      "docs": [
+        "read_doc"
+      ]
+    },
+    "eng_staff": {
+      "code-host": [
+        "view_repo",
+        "create_pr"
+      ],
+      "docs": [
+        "read_doc",
+        "create_doc"
+      ]
+    },
+    "finance_lead": {
+      "billing": [
+        "view_invoice",
+        "create_invoice",
+        "approve_invoice",
+        "view_payment"
+      ],
+      "docs": [
+        "read_doc"
+      ]
+    },
+    "sales_rep": {
+      "crm": [
+        "search_contacts",
+        "create_contact"
+      ],
+      "docs": [
+        "read_doc",
+        "create_doc"
+      ]
+    },
+    "support_rep": {
+      "billing": [
+        "view_invoice",
+        "view_payment"
+      ],
+      "crm": [
+        "search_contacts"
+      ],
+      "docs": [
+        "read_doc"
+      ]
+    }
+  }
+}
